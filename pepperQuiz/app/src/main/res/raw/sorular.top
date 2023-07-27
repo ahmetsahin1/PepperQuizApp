@@ -1,0 +1,27 @@
+topic: ~sorular()
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Replying to speech
+#u:(~hello) ~hello
+
+
+
+
+proposal: %soruSonu Hangisi doğal ışık kaynaklarındandır?
+proposal:%soru2basi Mıknastıs hangisini çeker?
+proposal:%soru3basi Hangisi opak bir maddedir?
+proposal:%soru4basi Hangisi saf maddedir?
+proposal:%son Soruların sonuna geldik.
+
+#u:(^empty) Sınavı Başlatıyorum. Başarılar Dilerim.
+#u:(deneme) deneme başarılı
+
+
+u:(_[mum "ateş böceği" meşale ] ) cevabınız ^first["$1=="ateş böceği" Doğru" "Yanlış"] soru  değisiyor. %soruDegistir
+u:( _["cam bilye" "toplu iğne" "silgi" ]) ikinci sorunuzun cevabı ^first["$1=="toplu iğne" Doğru" "Yanlış"]   %soruDegistir2
+u:( _[su cam tahta ]) üçüncü sorunuzun cevabı ^first["$1==tahta Doğru" "Yanlış"]   %soruDegistir3
+u:( _[limonata ayran su ]) dördüncü sorunuzun cevabı ^first["$1==su Doğru" "Yanlış"]   %soruDegistir4
+u:(e:Dialog/NotUnderstood) Seni anlamadım.
+
+

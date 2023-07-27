@@ -1,0 +1,16 @@
+topic: ~testi_baslat()
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Replying to speech
+#u:(~hello) ~hello
+
+concept:(basla) [basla başla "teste başla" "testi başlat" "sınavı başlat" "sınava başla"]
+
+#proposal: %soruSonu Hangisi doğal ışık kaynaklarındandır? ^goto(cevapBekle)
+proposal:%giris Merhaba ben pepır. Bu bir test uygulamasıdır. Testi başlatmak için "başla" diyebilirsiniz.
+#u:(^empty) Sınavı Başlatıyorum. Başarılar Dilerim.
+#u:(deneme) deneme başarılı
+u:(~basla) Başlıyoruz  %cevapBekle
+
+
